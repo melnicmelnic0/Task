@@ -13,13 +13,13 @@ export class ItemService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getItems(): Observable<Item[]> {
+  getItems() {
     return this.httpClient.get<Array<Item>>(`${this.baseUrl}/items`).pipe(
       map(response => response)
     );
   }
 
-  add(item: Item): Observable<Item> {
+  add(item: Item) {
     return this.httpClient.post<Item>(`${this.baseUrl}/add`, item);
   }
 
@@ -29,11 +29,11 @@ export class ItemService {
     );
   }
 
-  update(id:number,item: Item): Observable<Item> {
+  update(id:number,item: Item) {
     return this.httpClient.put<Item>(`${this.baseUrl}/edit/${id}`, item);
   }
 
-  delete(id: number): Observable<any> {
+  delete(id: number) {
     return this.httpClient.delete(`${this.baseUrl}/delete/${id}`, { responseType: 'text' });
   }
 

@@ -3,17 +3,6 @@ import { Item } from 'src/app/domain/item';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ItemService } from 'src/app/services/item.service';
 
-const ELEMENT_DATA: Item[] = [
-  { id: 1, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 2, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 3, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 4, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 5, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 6, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 7, title: 'Hydrogen', author: '1.0079', price: 12211 },
-  { id: 8, title: 'Hydrogen', author: '1.0079', price: 12211 },
-];
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
