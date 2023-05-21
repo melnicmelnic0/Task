@@ -10,7 +10,6 @@ export class ItemService {
 
   private baseUrl = 'http://localhost:8080/api';
  
-
   constructor(private httpClient: HttpClient) { }
 
   getItems() {
@@ -36,5 +35,4 @@ export class ItemService {
   delete(id: number) {
     return this.httpClient.delete(`${this.baseUrl}/delete/${id}`, { responseType: 'text' });
   }
-
 }

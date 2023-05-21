@@ -8,10 +8,7 @@ import { ItemService } from 'src/app/services/item.service';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']
 })
-
-
 export class HomePage implements OnInit {
-
   items: Item[] = [];
   addForm!: FormGroup;
   displayedColumns: string[] = ['title', 'author', 'price', 'actions'];
@@ -42,7 +39,6 @@ export class HomePage implements OnInit {
     this.items[i].editing = true;
   }
 
-
   deleteItem(id: number) {
     this.itemService.delete(id).subscribe({
       next: () => {
@@ -54,7 +50,6 @@ export class HomePage implements OnInit {
     });
   }
 
-  
   fetchItems(): void {
     this.itemService.getItems().subscribe(
       (data: Item[]) => {

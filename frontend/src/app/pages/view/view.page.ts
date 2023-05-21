@@ -10,13 +10,11 @@ import { ItemService } from 'src/app/services/item.service';
   styleUrls: ['./view.page.scss']
 })
 export class ViewPage implements OnInit {
-
   item: any = {};
 
   constructor(private itemService: ItemService,
     private route: ActivatedRoute
   ) { }
-
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
