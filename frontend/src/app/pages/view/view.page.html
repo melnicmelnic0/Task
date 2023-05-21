@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-content>
+    <h1>About item #{{item.id}}</h1>
+
+    <div>
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" [(ngModel)]="item.title" readonly>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Author</mat-label>
+        <textarea matInput placeholder="Author" [(ngModel)]="item.author" readonly></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <textarea matInput placeholder="Price" [(ngModel)]="item.price" readonly></textarea>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button  color="primary" routerLink="..">Înapoi</button>
+
+  </mat-card-content>
+</mat-card>
+
+
+
+
+
+
+
